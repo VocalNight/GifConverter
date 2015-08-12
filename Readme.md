@@ -1,4 +1,5 @@
-A simple Java gif converter using the Icafe(https://github.com/dragon66/icafe) library
+A simple Java gif converter using the Icafe(https://github.com/dragon66/icafe) library.
+
 This program will transform any gif into images for you to choose.
 
 Basically a gif to image converter.
