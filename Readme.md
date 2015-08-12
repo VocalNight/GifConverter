@@ -2,13 +2,24 @@ A simple Java gif converter using the Icafe(https://github.com/dragon66/icafe) l
 
 Essentially is the same that a lot of sites do, but without the need to upload the file or save them one by one when the site finishes.
 
-It will split any gif in various JPG images. You can configure in the code what type of extension you want (png, jpg, gif, etc).
+The program will ask for you to find a gif file, after you select it, it will open 2 windows.
+![alt tag](http://i.imgur.com/baJyZiF.png)
+![alt tag](http://i.imgur.com/LShiOL0.png)
 
-This is a very barebones version with a lot of commented code, most of it is working, but i was having difficulties with Swing, the frames would be separated in a way that left blank spots in certain frames, so i just left the "select the frame you want and save" approach for later.
+The Animation window will display the frames.
+The control panel will allow you to navigate all the frames of the gif, allowing you to select the exact frame you want.
+![alt tag](http://i.imgur.com/laeNRfm.png)
+![alt tag](http://i.imgur.com/BQKmzxO.png)
 
-The program itself works, it will ask for you to search a gif file, select it, and it will create all the frames in the root folder. 
+After finding the frame you want, press save, you will be able to save anywhere you want.
+![alt tag](http://i.imgur.com/bBSlTAy.png)
+No need to add the extension, the program takes care of that.
+![alt tag](http://i.imgur.com/gJeRHDB.png)
 
-I might expand on this, but honestly, messing with Java image libraries and Swing just isn't worth the hassle. I'll probably remake this in Scala.
+
+ You can configure in the code what type of extension you want (png, jpg, gif, etc).
+
+
 
 
 
