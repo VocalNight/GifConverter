@@ -1,5 +1,7 @@
 A simple Java gif converter using the Icafe(https://github.com/dragon66/icafe) library
 
+I'll add a download to the usable jar after i return from work.
+
 Essentially is the same that a lot of sites do, but without the need to upload the file or save them one by one when the site finishes.
 
 The program will ask for you to find a gif file, after you select it, it will open 2 windows.
