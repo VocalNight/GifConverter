@@ -4,7 +4,9 @@ This program will transform any gif into images for you to choose.
 
 Basically a gif to image converter.
 
-I'll add a download to the usable jar after i return from work.
+The download to a executable Jar file can be found here:
+
+https://mega.nz/#!kQ80WSQR!2E9Y5p7oYMjWzCsPs4WYAUTSYebcX1XGMkl9R9-WzE0
 
 Essentially is the same that a lot of sites do, but without the need to upload the file or save them one by one when the site finishes.
 
