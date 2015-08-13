@@ -27,8 +27,6 @@ public class GifEditor {
 
     JFrame f = new JFrame("Animation");
     int b = 0;
-    int overlay = 0;
-    int count = 0;
     int limit;
     List<BufferedImage> frames = new ArrayList<BufferedImage>();
 
@@ -36,8 +34,6 @@ public class GifEditor {
     public GifEditor() {
         super();
     }
-
-
 
     public void createPanel() {
         // Create the panel to chose the gif
@@ -69,17 +65,16 @@ public class GifEditor {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         createImagePanel();
         getFrame();
-
     }
 
 
-    // Creates the file control panel
+    // Creates the animation panel
     public void createImagePanel() {
 
         JLabel label = new JLabel(new ImageIcon(frames.get(b)));
+        //This is necessary to reset the swing and be able to show the correct frame
         f.getContentPane().removeAll();
         f.getContentPane().add(label);
         f.getContentPane().repaint();
@@ -90,7 +85,8 @@ public class GifEditor {
         f.setVisible(true);
     }
 
-    public int getFrame() {
+    // Creates the control panel
+    public void getFrame() {
         JFrame buttons = new JFrame("Commands");
         JPanel panel = new JPanel();
         buttons.add(panel);
@@ -122,14 +118,15 @@ public class GifEditor {
                 }
             }
         });
-        return b;
     }
 
     class NextFrame implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+        	//Check if the list reached an end
+        	//This is important because sometimes the last frame is actually the reset of the gif, it would be technically be the "-1" frame, before the first (0)
+        	//This is also important because then we avoid a ArrayOutOfBounds exception
             if (!(b >= limit - 1)) {
                 ++b;
-                overlay = 0;
                 createImagePanel();
             } else {
                 JOptionPane.showMessageDialog(null, "This is the last frame");
@@ -137,26 +134,9 @@ public class GifEditor {
         }
     }
 
-    class AdjustFrame implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            if (!(overlay >= limit - 1)) {
-                ++overlay;
-                createImagePanel();
-            } else {
-                JOptionPane.showMessageDialog(null, "This is the last frame possible. Clear the image");
-            }
-        }
-    }
-
-    class ClearFrame implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            overlay = 0;
-            createImagePanel();
-        }
-    }
-
     class PreviousFrame implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+        	//Same logic as before
             if (b != 0) {
                 --b;
                 createImagePanel();
